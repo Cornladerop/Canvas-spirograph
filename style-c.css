@@ -1,6 +1,11 @@
 * {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+}
+
+canvas {
+	box-shadow: 1px 1px 19px red;
 }
 
 .inputs {
@@ -9,60 +14,33 @@
 	margin-top: -740px;
 }
 
+input:not(:first-child) {
+	margin-top: 30px;
+}
 
-	input:not(:first-child) {
-		margin-top: 30px;
-	}
+.clear {
+	margin-top: 30px;
+}
 
-	.bigRad {
-		
-	}
+.stop {
+	margin-top: 30px;
+}
 
-	.smallRad {
+.chooseColor {
+	position: absolute;
+	margin-left: 1401px;
+	margin-top: -490px !important;
+	height: 17px;
+}
 
-	}
+.blur {
+	position: absolute;
+	margin-left: 1260px;
+	margin-top: -325px;
+}
 
-	.d {
-
-	}
-
-	.teta {
-
-	}
-
-	.clear {
-		margin-top: 30px;
-	}
-	.stop {
-		margin-top: 30px;
-	}
-	.chooseColor {
-		position: absolute;
-		margin-left: 1401px;
-		margin-top: -490px !important;
-		height: 17px;
-	}
-
-	.blur {
-		position: absolute;
-		margin-left: 1260px;
-		margin-top: -325px;
-	}
-
-		.shadowBlurSize {
-
-		}
-
-
-	.rotate {
-		position: absolute;
-		margin-top: -460px;
-		margin-left: 1260px;
-	}
-
-
-
-
-canvas {
-	box-shadow: 1px 1px 19px red;
+.rotate {
+	position: absolute;
+	margin-top: -460px;
+	margin-left: 1260px;
 }
