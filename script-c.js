@@ -55,6 +55,7 @@ let spiro = function () {
 	ctx.fillRect(x + canWid / 2, y + canHei / 2, 4, 4);
 	timer = setTimeout(spiro, step);
 };
+
 spiro();
 
 
@@ -70,12 +71,12 @@ function mainHue() {
 		buttonRotate.innerHTML = 'Оттенок-выкл';
 		clearInterval(hueTimer);
 	}
-}
+};
 
 function hueRotate() {
 	ctx.filter = `hue-rotate(${hueAngle}deg)`;
 	hueAngle += hueAngleStep;
-}
+};
 
 
 
@@ -84,32 +85,33 @@ function hueRotate() {
 // extraneous actions
 let clear, stopGoCount = 1;
 
-clear = document.querySelector('.clear')
-clear.onclick = function () {
+clear = document.querySelector('.clear');
+clear.addEventListener('click', () => {
 	ctx.clearRect(0, 0, canWid, canHei);
-}
+});
+
 let stop = document.querySelector('.stop');
-stop.onclick = function () {
+stop.addEventListener('click', () => {
 	if (stopGoCount % 2 === 0) {
 		Go();
 	} else stopGo();
 	stopGoCount++;
-}
+});
 
 let Go = function () {
 	stop.innerHTML = 'Stop?';
 	spiro();
-}
+};
 
 let stopGo = function () {
 	stop.innerHTML = 'Go?';
 	clearTimeout(timer);
-}
+};
 
 let choiseParametrs = function (e) {
 	if (e.keyCode === 13) {
 		let colorCanvas = prompt('подсветка холста', 'red');
-		canvas.style['boxShadow'] = `1px 1px 19px ${colorCanvas}`
+		canvas.style['boxShadow'] = `1px 1px 19px ${colorCanvas}`;
 	}
 };
-window.addEventListener('keydown', choiseParametrs)
+window.addEventListener('keydown', choiseParametrs);
